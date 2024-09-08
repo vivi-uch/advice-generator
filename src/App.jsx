@@ -30,7 +30,7 @@ function App() {
       {loading ? (
         <Dotsloader />
       ) : (
-        <div className="flex flex-col justify-center  bg-darkGrayishBlue p-5 text-center rounded-xl gap-6 relative w-96">
+        <div className="flex flex-col justify-center  bg-darkGrayishBlue pt-[23px] px-[23px] pb-[34px] text-center rounded-xl gap-6 relative w-[272px]">
           <Count count={count} />
           <Advice advice={advice} />
           <LinePause />
