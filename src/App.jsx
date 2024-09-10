@@ -16,8 +16,8 @@ function App() {
     setLoading(true);
     const res = await fetch("https://api.adviceslip.com/advice");
     const data = await res.json();
-    setAdvice(data.slip.advice);
-    setCount(data.slip.id);
+    setAdvice(data?.slip?.advice);
+    setCount(data?.slip?.id);
     setLoading(false);
   }
 
@@ -30,7 +30,7 @@ function App() {
       {loading ? (
         <Dotsloader />
       ) : (
-        <div className="flex flex-col justify-center  bg-darkGrayishBlue pt-[23px] px-[23px] pb-[34px] text-center rounded-xl gap-6 relative w-[272px]">
+        <div className="flex flex-col justify-center  bg-darkGrayishBlue pt-[23px] px-[23px] pb-[34px] text-center rounded-xl gap-6 relative w-[272px] lg:w-[500px]">
           <Count count={count} />
           <Advice advice={advice} />
           <LinePause />
